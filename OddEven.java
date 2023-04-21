@@ -1,33 +1,28 @@
-package day1;
-
+package day1;  
 import java.util.Scanner;
+public class PrimeNumbers {
 
-public class OddEven 
-{
-
-	public static void main(String[] args)
-	{
-
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter the num");
+		int num = sc.nextInt();
 		
-				int sum=0;
-		     Scanner sc= new Scanner(System.in);
-		    int n = sc.nextInt();
-			for(int i=1;i<=n;i++)
+			int i=0,flag=0,j=0;
+		for(i=2;i<=num;i++)
+		{  
+			int iCount=0;
+		
+		  for(j=1;j<=i;j++)
+		  {
+			if((i%j)==0)
 			{
-				if(i%2==0) 
-				{
-					sum = sum +i;
-				System.out.println("Sum of all Even no.="+sum);
-				
-				}else if(i%2!=0)
-				{
-					sum = sum + i;
-					System.out.println("Sum of all Odd no."+sum);
-				}
+			  iCount++;  
 			}
-	 }
 
+		  }
+		   if(iCount==2)
 		
-
-
+		   System.out.println(i);
+		}
+	}
 	}
